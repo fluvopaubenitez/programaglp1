@@ -3,61 +3,46 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Flame, ShieldAlert, Sparkle, RefreshCw } from 'lucide-react';
+import { Activity, ShieldAlert, RefreshCw, AlertCircle } from 'lucide-react';
 
 export default function ProblemSection() {
   const problems = [
     {
-      title: 'Pierdes músculo',
-      emphasis: 'Catabolismo acelerado.',
-      description: 'comer menos sin una ingesta estratégica de proteína de alta calidad biológica sacrifica directamente tu masa muscular, dañando tu fuerza y frenando el metabolismo basal.',
-      icon: (
-        <svg className="w-6 h-6 text-[#9CB4C0]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M6 18V6M18 18V6M6 12H18M12 6c0 3.333-2 6-6 6M12 6c0 3.333 2 6 6 6M12 18c0-3.333-2-6-6-6M12 18c0-3.333 2-6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
+      title: 'Pérdida acelerada de masa muscular',
+      emphasis: 'Catabolismo proteico.',
+      description: 'Reducir calorías sin un cálculo proteico preciso degrada el tejido muscular, afectando la fuerza y reduciendo drásticamente el gasto calórico en reposo.',
+      icon: <Activity className="w-5 h-5 text-[#2F4A45]" />
     },
     {
-      title: 'Los síntomas se instalan',
-      emphasis: 'Malestar constante.',
-      description: 'náuseas, reflujo gástrico persistente, fatiga y estreñimiento severo acaban convirtiéndose en tu molesta nueva normalidad, afectando drásticamente tu calidad de vida diaria.',
-      icon: (
-        <svg className="w-6 h-6 text-[#9CB4C0]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M12 9v4M12 17h.01M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      )
+      title: 'Síntomas gastrointestinales persistentes',
+      emphasis: 'Malestar digestivo no tratado.',
+      description: 'Las náuseas, el reflujo gástrico y el estreñimiento moderado a severo son señales de un vaciado gástrico alterado que requiere ajuste nutricional inmediato.',
+      icon: <ShieldAlert className="w-5 h-5 text-[#2F4A45]" />
     },
     {
-      title: 'El rebote',
-      emphasis: 'Ausencia de transición.',
-      description: 'al suspender el medicamento, recuperas rápidamente el peso perdido porque tu cuerpo carece de adaptación nutricional y nunca se estructuró un plan de salida metabólico real.',
-      icon: (
-        <svg className="w-6 h-6 text-[#9CB4C0]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8M20 8h-5V3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      )
+      title: 'Efecto rebote al suspender el tratamiento',
+      emphasis: 'Falta de protocolo de salida.',
+      description: 'Sin reeducación nutricional basada en ciencia ni hábitos consolidados, el organismo recupera el peso graso al retirar el fármaco.',
+      icon: <RefreshCw className="w-5 h-5 text-[#2F4A45]" />
     }
   ];
 
   return (
-    <section className="relative w-full py-16 md:py-24 px-6 sm:px-12 md:px-24 bg-[#FAF8F5] border-t border-[#A0B0B8]/10">
-      
-      {/* Sparkle star accent */}
-      <div className="absolute top-12 right-12 opacity-40 select-none hidden md:block">
-        <Sparkle className="w-6 h-6 text-[#C09CB4]" />
-      </div>
-
+    <section className="relative w-full py-16 md:py-24 px-6 sm:px-12 md:px-20 bg-[#EFEAE4] border-t border-[#D6D3CF]/60">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-16">
-          <span className="text-xs font-sans text-[#A0B0B8] font-medium uppercase tracking-widest block mb-3">
-            Efectos Colaterales Ocultos
+        <div className="max-w-3xl mb-14">
+          <span className="text-xs font-sans text-[#2F4A45] font-bold uppercase tracking-widest block mb-2">
+            Riesgos Clínicos Desatendidos
           </span>
-          <h2 className="font-serif text-[#C09CB4] text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-[1.12]">
-            El GLP-1 reduce tu apetito. <span className="text-[#947884]">No diseña tu alimentación.</span>
+          <h2 className="font-serif text-[#122033] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.12]">
+            El fármaco reduce el apetito. <span className="text-[#2F4A45] italic font-normal">La nutrición funcional preserva tu salud.</span>
           </h2>
-          <div className="h-[1px] w-24 bg-[#C09CB4]/30 mt-6" />
+          <p className="font-sans text-[#2D2D2D]/80 text-sm sm:text-base font-normal mt-3">
+            Para evitar secuelas metabólicas es indispensable acompañar el tratamiento con un protocolo estructurado.
+          </p>
+          <div className="h-[2px] w-20 bg-[#2F4A45] mt-6" />
         </div>
 
         {/* 3 Columns Cards Layout */}
@@ -65,39 +50,45 @@ export default function ProblemSection() {
           {problems.map((prob, idx) => (
             <div
               key={idx}
-              className="group relative bg-white/40 p-8 rounded-[24px] border border-white/60 hover:border-[#9CB4C0]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+              className="bg-white p-8 rounded-xl border border-[#D6D3CF] hover:border-[#122033] transition-all duration-200 hover:shadow-md flex flex-col justify-between"
             >
               <div>
-                {/* Icon wrapper with soft backdrop */}
-                <div className="w-12 h-12 rounded-2xl bg-[#9CB4C0]/10 flex items-center justify-center mb-6 transition-colors group-hover:bg-[#9CB4C0]/15">
+                {/* Icon wrapper */}
+                <div className="w-10 h-10 rounded-lg bg-[#EFEAE4] border border-[#D6D3CF] flex items-center justify-center mb-6">
                   {prob.icon}
                 </div>
 
                 {/* Card Title */}
-                <h3 className="font-serif text-[#947884] text-xl font-semibold tracking-wide mb-3">
+                <h3 className="font-serif text-[#122033] text-xl font-bold tracking-tight mb-3">
                   {prob.title}
                 </h3>
 
-                {/* Description adhering to the rule of emphasis (first words key branded malva) */}
-                <p className="font-sans text-[#5C5C5C] text-sm leading-relaxed font-light">
-                  <span className="text-[#C09CB4] font-medium">{prob.emphasis}</span> {prob.description}
+                {/* Description */}
+                <p className="font-sans text-[#2D2D2D]/80 text-xs sm:text-sm leading-relaxed font-normal">
+                  <strong className="text-[#2F4A45] font-semibold">{prob.emphasis}</strong> {prob.description}
                 </p>
               </div>
 
-              {/* Elegant bottom lines */}
-              <div className="w-full h-[2px] bg-gradient-to-r from-[#9CB4C0]/0 via-[#A0B0B8]/20 to-[#9CB4C0]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-6" />
+              <div className="mt-6 pt-4 border-t border-[#D6D3CF]/50 text-[11px] font-sans text-[#2D2D2D]/60 flex items-center justify-between">
+                <span>Riesgo {idx + 1} de 3</span>
+                <span className="text-[#2F4A45] font-semibold">Prevención Clínica</span>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Balanced Bottom Reminder Quote in 2nd Person */}
-        <div className="mt-16 text-center max-w-xl mx-auto">
-          <p className="font-serif text-base italic text-[#947884] font-medium mb-2">
-            "Aquí no venimos a hacer dietas extremas, a contar calorías ni a sobrevivir a tus síntomas hormonales digestivos."
+        {/* Clinical Note Quote */}
+        <div className="mt-14 p-6 bg-white rounded-xl border border-[#D6D3CF] max-w-3xl mx-auto text-center">
+          <p className="font-serif text-lg text-[#122033] font-medium italic">
+            "El objetivo no es comer menos por inercia, sino nutrir con precisión estratégica para tomar el control consciente sobre tu composición corporal."
           </p>
+          <span className="text-xs font-sans text-[#2F4A45] font-semibold uppercase tracking-wider block mt-2">
+            — Nut. Paulina Benítez
+          </span>
         </div>
 
       </div>
     </section>
   );
 }
+

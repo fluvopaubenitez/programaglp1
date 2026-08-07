@@ -13,7 +13,7 @@ import {
   Activity, 
   AlertCircle, 
   Flame, 
-  CornerDownRight 
+  CheckCircle2
 } from 'lucide-react';
 
 interface QuizLandingSectionProps {
@@ -40,151 +40,130 @@ export default function QuizLandingSection({ onStartQuiz, onBackToCourse }: Quiz
   };
 
   return (
-    <section className="min-h-[85vh] py-12 px-4 sm:px-8 md:px-16 lg:px-24 flex items-center justify-center bg-[#FAF8F5]">
+    <section className="min-h-[85vh] py-12 px-4 sm:px-8 md:px-16 lg:px-24 flex items-center justify-center bg-[#F8F6F3]">
       <motion.div 
         className="w-full max-w-4xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Subtle navigation indicator or return prompt for main page */}
-        <motion.div variants={itemVariants} className="flex justify-between items-center mb-8">
+        <motion.div variants={itemVariants} className="flex justify-between items-center mb-6">
           <button
             onClick={onBackToCourse}
-            className="cursor-pointer group text-xs text-[#A0B0B8] hover:text-[#947884] transition-colors flex items-center gap-1.5 focus:outline-none"
+            className="cursor-pointer group text-xs font-sans text-[#2D2D2D]/70 hover:text-[#122033] transition-colors flex items-center gap-1.5 focus:outline-none"
           >
             <RotateCcw className="w-3.5 h-3.5 group-hover:-rotate-45 transition-transform" />
             Ver detalles del Programa de 45 Días
           </button>
-          <span className="hidden sm:inline-block text-[10px] tracking-widest font-mono text-[#A0B0B8] uppercase">
-            Valoración 100% Digital / Sin Costo
+          <span className="hidden sm:inline-block text-[10px] tracking-widest font-sans font-semibold text-[#2F4A45] uppercase">
+            Valoración 100% Digital • Sin Costo
           </span>
         </motion.div>
 
-        {/* Central Card with clean high-contrast boundaries */}
-        <div className="bg-white border border-[#A0B0B8]/15 rounded-[40px] shadow-sm p-6 sm:p-12 md:p-16 relative overflow-hidden">
-          {/* Glowing gradient visual backdrops */}
-          <div className="absolute top-0 right-0 w-48 h-48 bg-[#EAD7DB]/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#9CB4C0]/15 rounded-full blur-3xl pointer-events-none" />
-
+        {/* Central Card */}
+        <div className="bg-white border border-[#D6D3CF] rounded-2xl shadow-xs p-6 sm:p-12 md:p-16 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center">
             
-            {/* Tag/Badge Motif */}
             <motion.div 
               variants={itemVariants}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EAD7DB]/45 border border-[#C09CB4]/20 text-[#947884] text-[10px] sm:text-xs tracking-wider uppercase font-medium mb-6"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EFEAE4] border border-[#D6D3CF] text-[#2F4A45] text-[11px] tracking-wider uppercase font-sans font-bold mb-6"
             >
-              <Sparkle className="w-3.5 h-3.5 text-[#C09CB4] animate-pulse" />
+              <Sparkle className="w-3.5 h-3.5 text-[#2F4A45]" />
               Nutrición de Precisión en GLP-1
             </motion.div>
 
-            {/* Main Editorial Header */}
             <motion.h1 
               variants={itemVariants}
-              className="font-serif text-[#C09CB4] text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-[1.12] mb-6"
+              className="font-serif text-[#122033] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.12] mb-6"
             >
-              ¿Cómo está reaccionando tu cuerpo al tratamiento con <span className="text-[#947884]">GLP-1</span>?
+              ¿Cómo está respondiendo tu cuerpo al tratamiento con <span className="text-[#2F4A45] italic font-normal">GLP-1</span>?
             </motion.h1>
 
-            {/* Strategic Value Proposition */}
             <motion.p 
               variants={itemVariants}
-              className="font-sans text-[#5C5C5C] text-sm sm:text-base md:text-lg font-light leading-relaxed mb-10 max-w-2xl"
+              className="font-sans text-[#2D2D2D]/80 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-10 max-w-2xl"
             >
-              Identifica debilidades nutricionales críticas, silencia síntomas clínicos digestivos y pon en marcha pautas de conservación muscular diseñadas por la especialista <span className="text-[#947884] font-medium font-serif italic">Nut. Paulina Benítez</span>.
+              Identifica debilidades nutricionales críticas, mitiga síntomas digestivos y establece pautas de conservación muscular guiadas por la <strong className="text-[#122033]">Nut. Paulina Benítez</strong>.
             </motion.p>
 
-            {/* 4 Pillars Grid Layout - High Visual Contrast */}
+            {/* 4 Pillars Grid Layout */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left w-full mb-12"
+              className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left w-full mb-10"
             >
-              {/* Pillar 1 */}
-              <div className="p-5 rounded-2xl bg-[#F4F4F8] border border-transparent hover:border-[#9CB4C0]/20 hover:bg-white transition-all group">
-                <div className="flex items-center gap-3 mb-2.5">
-                  <span className="w-8 h-8 rounded-lg bg-[#9CB4C0]/10 flex items-center justify-center text-[#9CB4C0]">
-                    <Flame className="w-4 h-4" />
-                  </span>
-                  <h3 className="font-serif text-sm font-semibold tracking-tight text-[#947884] group-hover:text-[#C09CB4] transition-colors">
-                    1. Composición corporal, músculo, cubrir proteína
+              <div className="p-5 rounded-xl bg-[#F8F6F3] border border-[#D6D3CF]">
+                <div className="flex items-center gap-3 mb-2">
+                  <Flame className="w-4 h-4 text-[#2F4A45] shrink-0" />
+                  <h3 className="font-serif text-sm font-bold text-[#122033]">
+                    1. Preservación Muscular & Proteína
                   </h3>
                 </div>
-                <p className="font-sans text-[11px] sm:text-xs text-[#5C5C5C] leading-relaxed font-light">
-                  Asegura que tu pérdida de peso provenga exclusivamente de grasa y no de tejido magro activo. Aprende pautas científicas para cubrir tu requerimiento de proteína diario.
+                <p className="font-sans text-xs text-[#2D2D2D]/80 leading-relaxed font-normal">
+                  Asegura que tu pérdida de peso provenga exclusivamente de tejido graso y no de masa magra activa.
                 </p>
               </div>
 
-              {/* Pillar 2 */}
-              <div className="p-5 rounded-2xl bg-[#F4F4F8] border border-transparent hover:border-[#9CB4C0]/20 hover:bg-white transition-all group">
-                <div className="flex items-center gap-3 mb-2.5">
-                  <span className="w-8 h-8 rounded-lg bg-[#C09CB4]/10 flex items-center justify-center text-[#C09CB4]">
-                    <Sparkle className="w-4 h-4" />
-                  </span>
-                  <h3 className="font-serif text-sm font-semibold tracking-tight text-[#947884] group-hover:text-[#C09CB4] transition-colors">
-                    2. Suplementación
+              <div className="p-5 rounded-xl bg-[#F8F6F3] border border-[#D6D3CF]">
+                <div className="flex items-center gap-3 mb-2">
+                  <Sparkle className="w-4 h-4 text-[#2F4A45] shrink-0" />
+                  <h3 className="font-serif text-sm font-bold text-[#122033]">
+                    2. Estrategia de Suplementación
                   </h3>
                 </div>
-                <p className="font-sans text-[11px] sm:text-xs text-[#5C5C5C] leading-relaxed font-light">
-                  Define los micronutrientes, minerales y apoyos esenciales necesarios para evitar deficiencias nutricionales críticas bajo el efecto de reducción de apetito.
+                <p className="font-sans text-xs text-[#2D2D2D]/80 leading-relaxed font-normal">
+                  Define micronutrientes y apoyos esenciales para evitar deficiencias críticas bajo la saciedad prolongada.
                 </p>
               </div>
 
-              {/* Pillar 3 */}
-              <div className="p-5 rounded-2xl bg-[#F4F4F8] border border-transparent hover:border-[#9CB4C0]/20 hover:bg-white transition-all group">
-                <div className="flex items-center gap-3 mb-2.5">
-                  <span className="w-8 h-8 rounded-lg bg-[#9CB4C0]/10 flex items-center justify-center text-[#9CB4C0]">
-                    <Activity className="w-4 h-4" />
-                  </span>
-                  <h3 className="font-serif text-sm font-semibold tracking-tight text-[#947884] group-hover:text-[#C09CB4] transition-colors">
-                    3. Control de síntomas gastrointestinales
+              <div className="p-5 rounded-xl bg-[#F8F6F3] border border-[#D6D3CF]">
+                <div className="flex items-center gap-3 mb-2">
+                  <Activity className="w-4 h-4 text-[#2F4A45] shrink-0" />
+                  <h3 className="font-serif text-sm font-bold text-[#122033]">
+                    3. Salud Digestiva Sintomática
                   </h3>
                 </div>
-                <p className="font-sans text-[11px] sm:text-xs text-[#5C5C5C] leading-relaxed font-light">
-                  Mitiga de manera efectiva efectos secundarios molestos como náuseas, reflujo y estreñimiento mediante hábitos y combinaciones de alimentos dirigidos.
+                <p className="font-sans text-xs text-[#2D2D2D]/80 leading-relaxed font-normal">
+                  Controla náuseas, reflujo y estreñimiento mediante ajustes nutricionales oportunos.
                 </p>
               </div>
 
-              {/* Pillar 4 */}
-              <div className="p-5 rounded-2xl bg-[#F4F4F8] border border-transparent hover:border-[#9CB4C0]/20 hover:bg-white transition-all group">
-                <div className="flex items-center gap-3 mb-2.5">
-                  <span className="w-8 h-8 rounded-lg bg-[#C09CB4]/10 flex items-center justify-center text-[#C09CB4]">
-                    <AlertCircle className="w-4 h-4" />
-                  </span>
-                  <h3 className="font-serif text-sm font-semibold tracking-tight text-[#947884] group-hover:text-[#C09CB4] transition-colors">
-                    4. Red flags y errores comunes a evitar
+              <div className="p-5 rounded-xl bg-[#F8F6F3] border border-[#D6D3CF]">
+                <div className="flex items-center gap-3 mb-2">
+                  <AlertCircle className="w-4 h-4 text-[#2F4A45] shrink-0" />
+                  <h3 className="font-serif text-sm font-bold text-[#122033]">
+                    4. Prevención del Efecto Rebote
                   </h3>
                 </div>
-                <p className="font-sans text-[11px] sm:text-xs text-[#5C5C5C] leading-relaxed font-light">
-                  Identifica las alertas clínicas críticas a monitorear y los errores habituales de alimentación que debes evitar para proteger tu salud y sostener tus resultados.
+                <p className="font-sans text-xs text-[#2D2D2D]/80 leading-relaxed font-normal">
+                  Aprende a estructurar un plan de salida metabólico real para cuando concluyas tu medicación.
                 </p>
               </div>
             </motion.div>
 
-            {/* Quick specifications / Trust Indicators */}
+            {/* Specification indicators */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-wrap justify-center gap-6 text-[11px] font-sans text-[#A0B0B8] mb-8 font-light"
+              className="flex flex-wrap justify-center gap-6 text-xs font-sans text-[#2D2D2D]/70 mb-8 font-normal"
             >
-              <span className="flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#C09CB4]" />
-                Solo toma 2 minutos
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-[#2F4A45]" />
+                Toma solo 2 minutos
               </span>
-              <span className="flex items-center gap-1">
-                <FileText className="w-3.5 h-3.5 text-[#9CB4C0]" />
-                Reporte de Perfil Clínico Seguro
+              <span className="flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5 text-[#2F4A45]" />
+                Reporte de Perfil Clínico
               </span>
-              <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C09CB4]" />
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#2F4A45]" />
                 100% Gratuito y Confidencial
               </span>
             </motion.div>
 
-            {/* Primary Action Button */}
             <motion.button
               variants={itemVariants}
               id="start-sublanding-quiz-btn"
               onClick={onStartQuiz}
-              className="cursor-pointer group rounded-full bg-[#9CB4C0] hover:bg-[#86A0AC] px-14 py-5 text-sm font-semibold tracking-widest uppercase text-white shadow-md hover:shadow-lg hover:translate-y-[-2px] active:scale-98 transition-all duration-300 inline-flex items-center gap-2.5"
+              className="cursor-pointer group rounded-xl bg-[#2F4A45] hover:bg-[#122033] px-12 py-4.5 text-xs font-semibold tracking-wider uppercase text-white shadow-xs transition-all duration-200 inline-flex items-center gap-2"
             >
               Iniciar Test Gratuito
               <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -192,13 +171,12 @@ export default function QuizLandingSection({ onStartQuiz, onBackToCourse }: Quiz
           </div>
         </div>
 
-        {/* Secondary Navigation Option */}
-        <motion.div variants={itemVariants} className="text-center mt-8">
+        <motion.div variants={itemVariants} className="text-center mt-6">
           <button
             onClick={onBackToCourse}
-            className="cursor-pointer text-xs font-sans text-[#A0B0B8] hover:text-[#9CB4C0] underline underline-offset-4 decoration-[#A0B0B8]/40 transition-colors focus:outline-none"
+            className="cursor-pointer text-xs font-sans text-[#2D2D2D]/70 hover:text-[#122033] underline underline-offset-4 transition-colors focus:outline-none"
           >
-            Quiero conocer primero los módulos y precio del Programa Integral GLP-1 (45 Días)
+            Quiero conocer primero los detalles del Programa Integral GLP-1 (45 Días)
           </button>
         </motion.div>
 
