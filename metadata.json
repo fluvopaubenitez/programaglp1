@@ -1,0 +1,8 @@
+{
+  "name": "Programa GLP-1 45 Días - Pau Benítez",
+  "description": "Programa integral de alimentación inteligente y acompañamiento clínico para tratamiento con GLP-1 por Paulina Benítez en 45 días.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
