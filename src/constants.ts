@@ -42,7 +42,7 @@ export const CUPON_LIMITE: string = "Primeras 5 personas";
 /**
  * Enlace directo a la pasarela de pago (Encuadrado) para adquirir el protocolo.
  */
-export const REEMPLAZAR_LINK_ENCUADRADO: string = "https://encuadrado.com/s/nutriologa-paulina-benitez/alimentacion-inteligente-para-glp-1/";
+export const REEMPLAZAR_LINK_ENCUADRADO: string = "https://encuadrado.com/s/nutriologa-paulina-benitez/alimentacion-inteligente-para-glp-1?from=app";
 
 /**
  * Enlace directo al grupo de apoyo de WhatsApp premium gratuito.
