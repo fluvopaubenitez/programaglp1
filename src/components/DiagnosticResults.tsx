@@ -18,7 +18,12 @@ import { QuizAnswers, LeadData, ProfileId } from '../types';
 import { PROFILE_DETAILS } from '../quizData';
 import { 
   REEMPLAZAR_LINK_WHATSAPP, 
-  REEMPLAZAR_LINK_ENCUADRADO 
+  REEMPLAZAR_LINK_ENCUADRADO,
+  CUPON_DESCUENTO,
+  CUPON_PORCENTAJE,
+  CUPON_LIMITE,
+  PRECIO_CON_DESCUENTO_USD,
+  REEMPLAZAR_PRECIO_USD
 } from '../constants';
 
 interface DiagnosticResultsProps {
@@ -115,7 +120,7 @@ export default function DiagnosticResults({ answers, lead, profileId, onRestart 
                   Incluye: Consulta Inicial, Curso GLP1, Ebook, Recetario con 20 recetas y Consulta Final en 45 días.
                 </p>
                 <div className="inline-block bg-[#2F4A45]/60 px-3 py-1.5 rounded-lg text-xs font-sans text-[#D8B8B5] border border-[#D8B8B5]/30">
-                  🎁 Cupón <strong className="font-mono text-white">GLP1</strong> = 15% OFF para las primeras 5 personas.
+                  🎁 Cupón <strong className="font-mono text-white">{CUPON_DESCUENTO}</strong> = {CUPON_PORCENTAJE} OFF (${PRECIO_CON_DESCUENTO_USD} USD) {CUPON_LIMITE.toLowerCase()}.
                 </div>
               </div>
 
@@ -126,7 +131,7 @@ export default function DiagnosticResults({ answers, lead, profileId, onRestart 
                   rel="noopener noreferrer"
                   className="cursor-pointer group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2F4A45] text-white hover:bg-white hover:text-[#122033] font-semibold text-xs uppercase tracking-wider transition-all duration-200 text-center"
                 >
-                  Inscribirme con Cupón GLP1
+                  Inscribirme con Cupón {CUPON_DESCUENTO}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>

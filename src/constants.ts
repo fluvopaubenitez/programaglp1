@@ -22,7 +22,7 @@ export const REEMPLAZAR_PRECIO_USD: string = "197";
 /**
  * Cupón de descuento especial de lanzamiento
  */
-export const CUPON_DESCUENTO: string = "GLP1";
+export const CUPON_DESCUENTO: string = "15GLP";
 
 /**
  * Porcentaje de descuento del cupón

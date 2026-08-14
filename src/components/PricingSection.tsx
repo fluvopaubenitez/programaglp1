@@ -281,7 +281,7 @@ export default function PricingSection() {
                   rel="noreferrer"
                   className="cursor-pointer group flex items-center justify-center gap-2 w-full rounded-xl bg-[#2F4A45] hover:bg-white hover:text-[#122033] py-4 text-xs font-semibold text-white tracking-wider uppercase transition-all duration-200 text-center shadow-xs"
                 >
-                  Inscribirme con cupón GLP1
+                  Inscribirme con cupón {CUPON_DESCUENTO}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
 

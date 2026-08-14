@@ -267,7 +267,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
             className="cursor-pointer group rounded-xl bg-[#2F4A45] hover:bg-[#122033] px-9 py-4.5 text-sm font-semibold tracking-wider text-white transition-all duration-200 hover:shadow-lg w-full sm:w-auto text-center flex items-center justify-center gap-2.5 uppercase shadow-xs"
           >
             <Sparkles className="w-4 h-4 text-[#D8B8B5]" />
-            Inscribirme con Cupón GLP1 →
+            Inscribirme con Cupón {CUPON_DESCUENTO} →
           </a>
 
           {onStartQuiz && (
@@ -281,7 +281,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
         </motion.div>
 
         <motion.p className="text-xs text-[#2D2D2D]/60 font-sans mt-4" variants={itemVariants}>
-          Aplica el cupón <strong className="text-[#122033]">GLP1</strong> para obtener tu 15% de descuento ($167.45 USD).
+          Aplica el cupón <strong className="text-[#122033]">{CUPON_DESCUENTO}</strong> para obtener tu {CUPON_PORCENTAJE} de descuento (${PRECIO_CON_DESCUENTO_USD} USD).
         </motion.p>
 
       </motion.div>
