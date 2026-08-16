@@ -17,7 +17,12 @@ export const REEMPLAZAR_URL_VSL: string = "";
 /**
  * Precio del programa en Dólares Estadounidenses (USD)
  */
-export const REEMPLAZAR_PRECIO_USD: string = "197";
+export const REEMPLAZAR_PRECIO_USD: string = "199.00";
+
+/**
+ * Precio del programa en Pesos Mexicanos (MXN)
+ */
+export const REEMPLAZAR_PRECIO_MXN: string = "3,400";
 
 /**
  * Cupón de descuento especial de lanzamiento
@@ -30,9 +35,14 @@ export const CUPON_DESCUENTO: string = "15GLP";
 export const CUPON_PORCENTAJE: string = "15%";
 
 /**
- * Precio final aproximado aplicando el cupón del 15% ($197 USD - 15% = $167.45 USD)
+ * Precio final aproximado aplicando el cupón del 15% ($199.00 USD - 15% = $169.15 USD)
  */
-export const PRECIO_CON_DESCUENTO_USD: string = "167.45";
+export const PRECIO_CON_DESCUENTO_USD: string = "169.15";
+
+/**
+ * Precio final aproximado aplicando el cupón del 15% ($3,400 MXN - 15% = $2,890 MXN)
+ */
+export const PRECIO_CON_DESCUENTO_MXN: string = "2,890";
 
 /**
  * Condición límite del cupón
@@ -42,7 +52,7 @@ export const CUPON_LIMITE: string = "Primeras 5 personas";
 /**
  * Enlace directo a la pasarela de pago (Encuadrado) para adquirir el protocolo.
  */
-export const REEMPLAZAR_LINK_ENCUADRADO: string = "https://encuadrado.com/s/nutriologa-paulina-benitez/alimentacion-inteligente-para-glp-1?from=app";
+export const REEMPLAZAR_LINK_ENCUADRADO: string = "https://encuadrado.com/s/nutriologa-paulina-benitez/programa-de-nutricion-y-estilo-de-vida-para-personas-con-glp-1?from=app";
 
 /**
  * Enlace directo al grupo de apoyo de WhatsApp premium gratuito.

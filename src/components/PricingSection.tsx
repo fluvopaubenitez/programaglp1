@@ -20,9 +20,11 @@ import {
 import { motion } from 'motion/react';
 import { 
   REEMPLAZAR_PRECIO_USD, 
+  REEMPLAZAR_PRECIO_MXN,
   CUPON_DESCUENTO,
   CUPON_PORCENTAJE,
   PRECIO_CON_DESCUENTO_USD,
+  PRECIO_CON_DESCUENTO_MXN,
   CUPON_LIMITE,
   REEMPLAZAR_LINK_ENCUADRADO,
   REEMPLAZAR_LINK_WHATSAPP
@@ -232,6 +234,9 @@ export default function PricingSection() {
                     <span className="text-sm text-[#D8B8B5] font-semibold uppercase tracking-wider font-sans">
                       USD
                     </span>
+                    <span className="text-sm text-[#EFEAE4]/70 font-sans ml-1">
+                      / ${REEMPLAZAR_PRECIO_MXN} MXN
+                    </span>
                   </div>
                   <span className="text-xs text-[#EFEAE4]/60 font-sans mt-1">
                     Precio regular de lanzamiento
@@ -249,7 +254,10 @@ export default function PricingSection() {
                   </p>
                   <div className="flex items-center justify-between pt-2 border-t border-[#D8B8B5]/20 text-xs font-sans">
                     <span className="text-[#EFEAE4]">Precio final con cupón:</span>
-                    <span className="font-serif text-xl font-bold text-[#D8B8B5]">${PRECIO_CON_DESCUENTO_USD} USD</span>
+                    <div className="text-right">
+                      <span className="font-serif text-xl font-bold text-[#D8B8B5]">${PRECIO_CON_DESCUENTO_USD} USD</span>
+                      <span className="text-[11px] text-[#EFEAE4]/80 block">(${PRECIO_CON_DESCUENTO_MXN} MXN)</span>
+                    </div>
                   </div>
                   <span className="text-[10px] text-[#D8B8B5]/80 font-sans block mt-1.5 italic">
                     * Válido {CUPON_LIMITE.toLowerCase()}.

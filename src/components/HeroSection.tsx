@@ -20,9 +20,11 @@ import {
 import { motion } from 'motion/react';
 import { 
   REEMPLAZAR_PRECIO_USD, 
+  REEMPLAZAR_PRECIO_MXN,
   CUPON_DESCUENTO, 
   CUPON_PORCENTAJE, 
   PRECIO_CON_DESCUENTO_USD, 
+  PRECIO_CON_DESCUENTO_MXN,
   CUPON_LIMITE,
   REEMPLAZAR_LINK_ENCUADRADO 
 } from '../constants';
@@ -152,10 +154,10 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
                 Lanzamiento Exclusivo
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-white tracking-tight">
-                Acceso al programa completo por <span className="text-[#D8B8B5] font-bold">${REEMPLAZAR_PRECIO_USD} USD</span>
+                Acceso al programa completo por <span className="text-[#D8B8B5] font-bold">${REEMPLAZAR_PRECIO_USD} USD</span> <span className="text-lg sm:text-xl text-[#EFEAE4]/80 font-normal">(${REEMPLAZAR_PRECIO_MXN} MXN)</span>
               </h2>
               <p className="font-sans text-xs sm:text-sm text-[#EFEAE4]/90 font-light mt-2 max-w-xl leading-relaxed">
-                Aplica el cupón <span className="font-mono font-bold bg-[#2F4A45] px-2 py-0.5 rounded text-[#D8B8B5] uppercase border border-[#D8B8B5]/30">{CUPON_DESCUENTO}</span> para obtener <strong className="text-[#D8B8B5] font-semibold">{CUPON_PORCENTAJE} de descuento</strong> (${PRECIO_CON_DESCUENTO_USD} USD).
+                Aplica el cupón <span className="font-mono font-bold bg-[#2F4A45] px-2 py-0.5 rounded text-[#D8B8B5] uppercase border border-[#D8B8B5]/30">{CUPON_DESCUENTO}</span> para obtener <strong className="text-[#D8B8B5] font-semibold">{CUPON_PORCENTAJE} de descuento</strong> (${PRECIO_CON_DESCUENTO_USD} USD / ${PRECIO_CON_DESCUENTO_MXN} MXN).
               </p>
             </div>
 
@@ -281,7 +283,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
         </motion.div>
 
         <motion.p className="text-xs text-[#2D2D2D]/60 font-sans mt-4" variants={itemVariants}>
-          Aplica el cupón <strong className="text-[#122033]">{CUPON_DESCUENTO}</strong> para obtener tu {CUPON_PORCENTAJE} de descuento (${PRECIO_CON_DESCUENTO_USD} USD).
+          Aplica el cupón <strong className="text-[#122033]">{CUPON_DESCUENTO}</strong> para obtener tu {CUPON_PORCENTAJE} de descuento (${PRECIO_CON_DESCUENTO_USD} USD / ${PRECIO_CON_DESCUENTO_MXN} MXN).
         </motion.p>
 
       </motion.div>

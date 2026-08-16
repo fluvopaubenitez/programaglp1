@@ -4,7 +4,7 @@
  */
 
 import { Sparkles, ArrowUpRight } from 'lucide-react';
-import { REEMPLAZAR_LINK_ENCUADRADO } from '../constants';
+import { REEMPLAZAR_LINK_ENCUADRADO, REEMPLAZAR_PRECIO_USD, REEMPLAZAR_PRECIO_MXN } from '../constants';
 
 interface HeaderProps {
   onStartQuiz?: () => void;
@@ -62,7 +62,7 @@ export default function Header({ onStartQuiz }: HeaderProps) {
             rel="noopener noreferrer"
             className="cursor-pointer hidden sm:inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-white bg-[#2F4A45] hover:bg-[#122033] px-4 py-2.5 rounded-xl transition-all shadow-2xs hover:shadow-sm"
           >
-            Inscribirme ($197 USD)
+            Inscribirme (${REEMPLAZAR_PRECIO_USD} USD)
             <ArrowUpRight className="w-3.5 h-3.5 text-[#D8B8B5]" />
           </a>
         </div>
