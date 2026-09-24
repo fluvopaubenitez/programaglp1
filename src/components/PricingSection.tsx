@@ -21,11 +21,6 @@ import { motion } from 'motion/react';
 import { 
   REEMPLAZAR_PRECIO_USD, 
   REEMPLAZAR_PRECIO_MXN,
-  CUPON_DESCUENTO,
-  CUPON_PORCENTAJE,
-  PRECIO_CON_DESCUENTO_USD,
-  PRECIO_CON_DESCUENTO_MXN,
-  CUPON_LIMITE,
   REEMPLAZAR_LINK_ENCUADRADO,
   REEMPLAZAR_LINK_WHATSAPP
 } from '../constants';
@@ -243,25 +238,15 @@ export default function PricingSection() {
                   </span>
                 </div>
 
-                {/* PROMO COUPON HIGHLIGHT BOX */}
-                <div className="bg-[#2F4A45]/60 border border-[#D8B8B5]/30 p-4.5 rounded-xl mb-6">
+                {/* VALUE HIGHLIGHT BOX */}
+                <div className="bg-[#2F4A45]/50 border border-[#D8B8B5]/30 p-4.5 rounded-xl mb-6">
                   <div className="flex items-center gap-2 text-xs font-sans font-bold text-[#D8B8B5] mb-1">
-                    <Tag className="w-4 h-4 text-[#D8B8B5]" />
-                    <span>¡Cupón especial de lanzamiento!</span>
+                    <Sparkles className="w-4 h-4 text-[#D8B8B5]" />
+                    <span>Inscripciones y Acceso Inmediato</span>
                   </div>
-                  <p className="text-xs text-[#EFEAE4]/90 font-sans leading-relaxed mb-3">
-                    Usa el cupón <strong className="font-mono bg-[#122033] px-2 py-0.5 rounded text-[#D8B8B5] font-bold border border-[#D8B8B5]/30">{CUPON_DESCUENTO}</strong> y obtén un <strong className="text-[#D8B8B5]">{CUPON_PORCENTAJE} de descuento</strong>.
+                  <p className="text-xs text-[#EFEAE4]/90 font-sans leading-relaxed">
+                    Incluye protocolo clínico de 45 días, 2 consultas 1 a 1 personalizadas, recetario digital y soporte continuo.
                   </p>
-                  <div className="flex items-center justify-between pt-2 border-t border-[#D8B8B5]/20 text-xs font-sans">
-                    <span className="text-[#EFEAE4]">Precio final con cupón:</span>
-                    <div className="text-right">
-                      <span className="font-serif text-xl font-bold text-[#D8B8B5]">${PRECIO_CON_DESCUENTO_USD} USD</span>
-                      <span className="text-[11px] text-[#EFEAE4]/80 block">(${PRECIO_CON_DESCUENTO_MXN} MXN)</span>
-                    </div>
-                  </div>
-                  <span className="text-[10px] text-[#D8B8B5]/80 font-sans block mt-1.5 italic">
-                    * Válido {CUPON_LIMITE.toLowerCase()}.
-                  </span>
                 </div>
 
                 <div className="h-[1px] bg-white/10 w-full mb-6" />
@@ -289,7 +274,7 @@ export default function PricingSection() {
                   rel="noreferrer"
                   className="cursor-pointer group flex items-center justify-center gap-2 w-full rounded-xl bg-[#2F4A45] hover:bg-white hover:text-[#122033] py-4 text-xs font-semibold text-white tracking-wider uppercase transition-all duration-200 text-center shadow-xs"
                 >
-                  Inscribirme con cupón {CUPON_DESCUENTO}
+                  Inscribirme al programa (${REEMPLAZAR_PRECIO_USD} USD)
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
 

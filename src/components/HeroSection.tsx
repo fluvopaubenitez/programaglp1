@@ -21,11 +21,6 @@ import { motion } from 'motion/react';
 import { 
   REEMPLAZAR_PRECIO_USD, 
   REEMPLAZAR_PRECIO_MXN,
-  CUPON_DESCUENTO, 
-  CUPON_PORCENTAJE, 
-  PRECIO_CON_DESCUENTO_USD, 
-  PRECIO_CON_DESCUENTO_MXN,
-  CUPON_LIMITE,
   REEMPLAZAR_LINK_ENCUADRADO 
 } from '../constants';
 
@@ -140,7 +135,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
           Nutrición funcional, evidencia científica y estrategia clínica para potenciar tu metabolismo en 45 días junto a la <strong className="text-[#122033] font-semibold">Nut. Paulina Benítez</strong>.
         </motion.p>
 
-        {/* PROMO & COUPON HIGHLIGHT BANNER */}
+        {/* PROGRAM PRICING & ENROLLMENT HIGHLIGHT BANNER */}
         <motion.div 
           variants={itemVariants}
           className="w-full max-w-4xl mb-14 bg-[#122033] text-white p-6 sm:p-8 md:p-10 rounded-2xl border border-[#2F4A45]/40 shadow-xl relative overflow-hidden text-left"
@@ -150,24 +145,24 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
             <div>
               <div className="inline-flex items-center gap-2 bg-[#2F4A45] px-3 py-1 rounded-md text-[11px] font-sans font-semibold uppercase tracking-wider text-white mb-3 border border-[#D8B8B5]/30">
-                <Tag className="w-3.5 h-3.5 text-[#D8B8B5]" />
-                Lanzamiento Exclusivo
+                <Sparkles className="w-3.5 h-3.5 text-[#D8B8B5]" />
+                Inscripciones Abiertas
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-white tracking-tight">
                 Acceso al programa completo por <span className="text-[#D8B8B5] font-bold">${REEMPLAZAR_PRECIO_USD} USD</span> <span className="text-lg sm:text-xl text-[#EFEAE4]/80 font-normal">(${REEMPLAZAR_PRECIO_MXN} MXN)</span>
               </h2>
               <p className="font-sans text-xs sm:text-sm text-[#EFEAE4]/90 font-light mt-2 max-w-xl leading-relaxed">
-                Aplica el cupón <span className="font-mono font-bold bg-[#2F4A45] px-2 py-0.5 rounded text-[#D8B8B5] uppercase border border-[#D8B8B5]/30">{CUPON_DESCUENTO}</span> para obtener <strong className="text-[#D8B8B5] font-semibold">{CUPON_PORCENTAJE} de descuento</strong> (${PRECIO_CON_DESCUENTO_USD} USD / ${PRECIO_CON_DESCUENTO_MXN} MXN).
+                45 días de acompañamiento nutricional clínico, 2 consultas 1 a 1, recetario especializado y acceso total al curso interactivo.
               </p>
             </div>
 
             <div className="shrink-0 flex flex-col items-start md:items-end gap-1 bg-[#2F4A45]/60 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-[#D6D3CF]/20">
-              <span className="text-[10px] uppercase tracking-widest font-sans text-[#EFEAE4]/80 font-medium">Cupón Activo</span>
-              <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-[#D8B8B5]">
-                {CUPON_DESCUENTO}
+              <span className="text-[10px] uppercase tracking-widest font-sans text-[#EFEAE4]/80 font-medium">Inversión Total</span>
+              <span className="font-serif text-2xl sm:text-3xl font-bold text-[#D8B8B5]">
+                ${REEMPLAZAR_PRECIO_USD} <span className="text-sm font-sans text-[#EFEAE4]/80 font-normal">USD</span>
               </span>
-              <span className="text-[10px] text-[#D8B8B5] font-sans italic">
-                * {CUPON_LIMITE}
+              <span className="text-xs text-[#EFEAE4]/80 font-sans">
+                ${REEMPLAZAR_PRECIO_MXN} MXN
               </span>
             </div>
           </div>
@@ -269,7 +264,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
             className="cursor-pointer group rounded-xl bg-[#2F4A45] hover:bg-[#122033] px-9 py-4.5 text-sm font-semibold tracking-wider text-white transition-all duration-200 hover:shadow-lg w-full sm:w-auto text-center flex items-center justify-center gap-2.5 uppercase shadow-xs"
           >
             <Sparkles className="w-4 h-4 text-[#D8B8B5]" />
-            Inscribirme con Cupón {CUPON_DESCUENTO} →
+            Inscribirme al programa (${REEMPLAZAR_PRECIO_USD} USD) →
           </a>
 
           {onStartQuiz && (
@@ -283,7 +278,7 @@ export default function HeroSection({ onStartQuiz }: HeroSectionProps) {
         </motion.div>
 
         <motion.p className="text-xs text-[#2D2D2D]/60 font-sans mt-4" variants={itemVariants}>
-          Aplica el cupón <strong className="text-[#122033]">{CUPON_DESCUENTO}</strong> para obtener tu {CUPON_PORCENTAJE} de descuento (${PRECIO_CON_DESCUENTO_USD} USD / ${PRECIO_CON_DESCUENTO_MXN} MXN).
+          Inversión total: <strong className="text-[#122033]">${REEMPLAZAR_PRECIO_USD} USD</strong> (${REEMPLAZAR_PRECIO_MXN} MXN) con acceso inmediato y acompañamiento de 45 días.
         </motion.p>
 
       </motion.div>
